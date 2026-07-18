@@ -219,7 +219,7 @@ int main() {
     double Error = 0.0;
     
     int rep = 0;
-    //ver.1 반복횟수 입력받아서 원하는 횟수 만큼 순전파 역전파 반복하기
+    // 반복횟수 입력받아서 원하는 횟수 만큼 순전파 역전파 반복하기
     
 
     scanf("%d", &rep);// 반복횟수
@@ -231,7 +231,7 @@ int main() {
 
         printf("순전파 %d회차\n",a);
         forward(MLP, weight, sizes, layer, b);
-        printf("첫 번째 히든레이어부터 출력레이어까지 차례대로 출력\n");
+        printf("입력레이어부터 출력레이어까지 차례대로 출력\n");
 
         if (a > 1) { // 전 회차에 할당한 공간이 있으므로 먼저 해제 시키기
             for (int i = 0; i < layer - 1; i++) {
@@ -287,7 +287,7 @@ int main() {
 
     printf("순전파 %d회차\n", rep + 1);
     forward(MLP, weight, sizes, layer, b);
-    printf("첫 번째 히든레이어부터 출력레이어까지 차례대로 출력\n");
+    printf("입력레이어부터 출력레이어까지 차례대로 출력\n");
 
     for (int i = 0; i < layer; i++) {
 
